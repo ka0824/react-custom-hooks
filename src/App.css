@@ -7,5 +7,10 @@
 .use-input {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 20px auto;
+}
+
+.use-tap {
+  display: flex;
+  flex-direction: column;
 }
