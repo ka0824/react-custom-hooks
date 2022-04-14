@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import useInput from './customHooks/useInput';
 import './App.css';
 
 function App() {
+  
+
+  const checkLength = (value) => value.length <= 5; 
+  const name = useInput('', checkLength);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <div className="use-input"> useInput 테스트 입니다.
+        <input value={name.value} onChange={name.onChange}></input>
+      </div>
+
+
     </div>
   );
 }
